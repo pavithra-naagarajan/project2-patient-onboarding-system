@@ -1,4 +1,4 @@
-# project3-patient-onboarding-system
+# project2-patient-onboarding-system
 
 <h3>Technologies Used</h3>
   <h4><ul><li>Angular</Li>
