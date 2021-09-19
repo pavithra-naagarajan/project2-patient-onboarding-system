@@ -1,0 +1,25 @@
+<body>
+<br><br><h3 style="text-align: center; font-size: x-large;color:brown">Book Appointment</h3><br><br>
+<div>
+    <div class="reglist">
+    
+      <table class="table table-striped">
+      <thead>
+      <tr>
+      <th>Available Date</th>
+      <th>Available Time</th>
+      <th>Book Appointment</th>
+      <!--doctorId=1 --doctors-- /doctorAvailability-searno/ patient=1 -->
+      </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let avail of doctorAvailability;">  
+          <td>{{avail.availableDate | date}}</td>
+          <td>{{avail.availableTime}}</td>
+      <td><button type="button" class="btn btn-info" (click)=bookAppointment(avail.serialNo)>Book</button></td>
+      </tr>
+      </tbody>
+      </table>
+</div>
+</div>
+</body>

@@ -1,0 +1,17 @@
+
+button
+{
+    font-size: large;
+}
+.avatar img {
+	width: 145px;
+	align-items: center;
+	margin-left: 50px;
+	padding: 10px
+}
+
+.maroon{
+	color: maroon;
+	font-size: xx-large;
+	
+}

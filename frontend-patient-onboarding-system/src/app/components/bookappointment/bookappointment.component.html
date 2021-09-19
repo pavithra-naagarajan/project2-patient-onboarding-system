@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Appointment Lists</title>
+    </head>
+    <body>
+        <style>
+        body{
+            background-image: url("https://img.freepik.com/free-vector/green-sand-paper_53876-86281.jpg?size=626&ext=jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        </style>
+        <div class="container">
+            <form id="Form1">
+                
+                <h3>PATIENT DETAILS</h3>
+                <input type="text" placeholder="Patient Id" value="{{patientAppointment.patientId}}" readonly>
+                <input type="text" placeholder="Patient Name" value="{{patientAppointment.patientName}}" readonly>
+                <input type="text" placeholder="Patient age" value="{{patientAppointment.patientAge}}" readonly>
+                <div class="btn-box">
+                <h3>DOCTOR DETAILS</h3>
+                <input type="text" placeholder="Doctor Name" value="{{patientAppointment.doctorName}}" readonly>
+                <input type="text" placeholder="Doctor Domain" value="{{patientAppointment.doctorDomain}}" readonly>
+                <input type="date" placeholder="Appointment Date" value="{{patientAppointment.availableDate}}" readonly>
+                <input type="time" placeholder="Appointment time" value="{{patientAppointment.availableTime}}" readonly>
+                <div class="btn-box">
+                    <button type="button" id="Back1" (click)="confrimAppoinment()">Confirm</button>
+                    <a href="patient"><button  type="button" id="Back1" class="btn btn-info" style="background-color:#f44336">Cancel</button></a>
+                </div>
+        </div>
+       </form>
+       </div>
+       </body>
+<!-- <body>
+<form>
+    <h4><i>Patient Deatils</i></h4>
+<h5>Patient Id: {{patientAppointment.patientId}}</h5>
+<h5>Patient Name: {{patientAppointment.patientName}}</h5>
+<h5>Patient age: {{patientAppointment.patientAge}}</h5>
+    <h4><i>Doctor Deatils</i></h4>
+<h5>Doctor Name: {{patientAppointment.doctorName}}</h5>
+<h5>Doctor Domain: {{patientAppointment.doctorDomain}}</h5>
+<h5>Appointment Date: {{patientAppointment.availableDate | date}}</h5>
+<h5>Appointment Time: {{patientAppointment.availableTime}}</h5>
+</form>
+<button type="button" class="btn btn-info" class="btn btn-pill text-white btn-block btn-primary" (click)="confrimAppoinment()">Select</button>&nbsp;&nbsp;
+<a href="patient"><button class="btn btn-info" style="background-color:#f44336">Cancel</button></a>
+</body> -->
+
+
+<!-- console.log("GET DOCTOR AVAILABLITY.....")
+        console.log(this.doctorAvailability)
+        console.log(this.doctorAvailability[0].doctor)
+        console.log("############# DOCTOR ID.....")
+        console.log(this.doctorAvailability[0].doctor.doctorId)
+        console.log("**************************DOCTOR ID....."+this.doctorId)
+        console.log("-----------------------------------------")
+        console.log("Doctor Id:"+this.doctorId)
+        console.log("Doctor Name: "+this.doctorAvailability[0].doctor.doctorName)
+        console.log("Doctor Domain: "+this.doctorAvailability[0].doctor.doctorDomain)
+        console.log("Doctor Experince: "+this.doctorAvailability[0].doctor.doctorExperience)
+        console.log("Doctor Mobile No: "+this.doctorAvailability[0].doctor.doctorMobileNo)
+        console.log("Available date:"+this.doctorAvailability[0].availableDate)
+        console.log("Available Time:"+this.doctorAvailability[0].availableTime) -->

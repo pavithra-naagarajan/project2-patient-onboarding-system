@@ -1,0 +1,58 @@
+<!-- <div class="container">
+    <form novalidate [formGroup]="adminlogin" (ngSubmit)="adminLogin()">
+        <fieldset>
+            <div class="form-group">
+                <label>AdminId</label> 
+                <input type="text" class="form-control" formControlName="adminId">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" formControlName="adminPassword">
+            </div>
+        </fieldset>
+        <button type="submit" class="btn btn-success">Login</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+    </form>
+</div> 
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> 
+<title>Admin Login Form</title>
+</head>
+<body  style="background-color:silver;" background="https://images.all-free-download.com/images/graphiclarge/plain_violet_background_211239.jpg
+">
+<script type="text/javascript" src="Js/loginValidation.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<div class="container">
+    <br><br><br><br>
+    <h2 style="text-align: center;color:black;font-size: x-large;"> Admin Login</h2>
+    <form novalidate [formGroup]="adminlogin" (ngSubmit)="adminLogin()" style="width:300px;padding: 30px;margin-left: 430px;">
+       
+        <div class="avatar">
+            <img src="assets/avatar.svg">
+        </div><br/>
+        <fieldset>
+            <div class="form-group">
+                <i class="fas fa-user"></i>&nbsp;
+                <label>AdminId</label> 
+                <input type="text" class="form-control" formControlName="adminId">
+            </div>
+            <div class="form-group">
+                <i class="fas fa-lock"></i>&nbsp;
+                <label>Password</label>
+                <input type="password" class="form-control" formControlName="adminPassword">
+            </div>
+        </fieldset>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-success">Login</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="reset" class="btn btn-primary">Reset</button>
+    </form>
+</div> 
+<br><br><br><br><br><br><br><br>
+</body>
+</html>

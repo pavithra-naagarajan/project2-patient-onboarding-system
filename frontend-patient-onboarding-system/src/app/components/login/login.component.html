@@ -1,0 +1,119 @@
+<!-- <h2>Login</h2>
+
+<br><br>
+<h3><font color=red>{{errorMessage}}</font></h3>
+<form [formGroup]="loginForm" (ngSubmit)="patientLogin()">
+    <div class="form-group">
+        <label for="patientId">Patient Id</label>
+        <input type="text" formControlName="patientId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.patientId.errors }" />
+        <div *ngIf="submitted && f.patientId.errors" class="invalid-feedback">
+            <div *ngIf="f.patientId.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="patientName">Patient Name</label>
+        <input type="text" formControlName="patientName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.patientName.errors }" />
+        <div *ngIf="submitted && f.patientName.errors" class="invalid-feedback">
+            <div *ngIf="f.patientName.errors.required">Patient Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+        </button>
+        <button class="btn btn-success" type="reset">Reset</button>
+        <a routerLink="/signUp" class="btn btn-link">Register</a>
+    </div>
+</form>
+
+
+
+ -->
+
+
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> 
+<title>Patient Login Form</title>
+</head>
+    <style>
+        body {
+	font-family: 'Poppins', sans-serif;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	opacity:1;
+	background-size: 100%,100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+}
+    </style>
+<body  style="background-color:silver;" background="https://images.all-free-download.com/images/graphiclarge/plain_violet_background_211239.jpg
+">
+<script type="text/javascript" src="Js/loginValidation.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+<div class="container">
+    <br><br><br>
+<h2 style="text-align: center;color:black;font-size: x-large;"> Patient Login</h2>
+<h3><font color=red>{{errorMessage}}</font></h3>
+<form [formGroup]="loginForm" (ngSubmit)="patientLogin()" style="width:300px;padding: 30px;margin-left: 430px;">
+   
+    <div class="avatar">
+        <img src="assets/avatar.svg" style="width: 145px;align-items: center;margin-left: 50px;  padding: 10px">
+    </div><br/>
+    <fieldset>
+    <div class="form-group">
+        <i class="fas fa-user"></i>&nbsp;
+        <label for="patientId">Patient Id</label>
+        <input type="text" formControlName="patientId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.patientId.errors }" />
+        <div *ngIf="submitted && f.patientId.errors" class="invalid-feedback">
+            <div *ngIf="f.patientId.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <i class="fas fa-user"></i>&nbsp;
+        <label for="patientName">Patient Name</label>
+        <input type="text" formControlName="patientName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.patientName.errors }" />
+        <div *ngIf="submitted && f.patientName.errors" class="invalid-feedback">
+            <div *ngIf="f.patientName.errors.required">Patient Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <i class="fas fa-lock"></i>&nbsp;
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>
+    </div>
+    </fieldset>
+    <div class="form-group">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button [disabled]="loading" class="btn btn-primary" style="font-size: large;">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-success" type="reset" style="font-size: large;">Reset</button>
+        <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a style="font-size: large;color: maroon;" routerLink="/signUp" class="btn btn-link">Register</a>
+    </div>
+</form>
+</div>
+
+</body></html>
+

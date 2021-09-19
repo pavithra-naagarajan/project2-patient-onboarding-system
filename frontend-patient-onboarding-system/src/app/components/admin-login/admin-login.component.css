@@ -1,0 +1,37 @@
+@charset "ISO-8859-1";
+
+body
+{
+    font-size: large;
+	
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	opacity:1;
+	background-size: 100%,100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+}
+
+button
+{
+    font-size: large;
+}
+.avatar img {
+	width: 1px;
+	align-items: center;
+	margin-left: 50px;
+	padding: 10px
+}
+
+.maroon{
+	color: maroon;
+	font-size: xx-large;
+	
+}
+

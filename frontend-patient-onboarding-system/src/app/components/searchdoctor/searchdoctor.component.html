@@ -1,0 +1,60 @@
+<body>
+  <style>
+    body{
+    background-image: url("https://img.freepik.com/free-vector/green-sand-paper_53876-86281.jpg?size=626&ext=jpg");
+    background-position: center;
+    background-size: cover;
+}
+  </style>
+<div>
+<br><br><br><br>
+    <form style="margin-left: 300px;"
+    novalidate [formGroup]="searchDomainForm" (ngSubmit)='searchDomain()' style="margin-left: 400px;" >
+           <div class="col-md-6">
+
+             <label for="domainName"><i>Choose Doctor Domain</i></label><br><br>
+             <select class="form-control form-control-lg"  name="hostel" name="domainName" formControlName="domainName" ngModel required>
+                 <option selected="selected">Dental</option>
+                 <option>Neurologists</option>
+                 <option>Dermatologists</option>
+                 <option>Orthopedic</option>
+                 <option>Ophthalmologist</option>
+                 <option>Cardiologists</option>
+             </select>
+       </div><br><br>
+         <input style="margin-left: 250px;" type="submit" value="Search Doctor" class="btn btn-primary" [disabled]="searchDomainForm.invalid">
+       </form> 
+       
+       <div *ngIf="showDoctors">
+       <div class="reglist">
+       
+         <table class="table table-striped">
+         <thead>
+         <tr>
+         <th>DoctorName</th>
+         <th>Domain</th>
+         <th>Experience</th>
+         <th>MobileNo</th>
+         <th>Status</th>
+         <th>Choose</th>
+         
+         </tr>
+         </thead>
+         <tbody>
+         <tr *ngFor="let doct of doctorsList;">
+         <td>{{doct.doctorName}}</td>
+         <td>{{doct.doctorDomain}}</td>
+         <td>{{doct.doctorExperience}}</td>
+         <td>{{doct.doctorMobileNo}}</td>
+         <td>{{doct.status}}</td>
+                                                                                         
+         <td><button type="button" class="btn btn-info" [ngStyle]="{'background-color':doct.status === 'Yes' ? 'green' : 'red' }" [disabled]="doct.status==='No'"  (click)="selectDoctor(doct.doctorId,patient.patientId)">Select</button></td>
+         </tr>
+         </tbody>
+         </table>
+   </div>
+   </div>
+ 
+ </div>
+ 
+</body>

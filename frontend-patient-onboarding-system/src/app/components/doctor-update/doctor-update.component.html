@@ -1,0 +1,141 @@
+<!-- <h3 align="center">Enter Your details :</h3>
+               
+    
+<div class="container">
+    <form novalidate [formGroup]="doctorForm" (ngSubmit)="updateDetails()">
+        <fieldset>
+           <div class="form-group">
+                <label>Id :</label>
+                <input type="text" class="form-control" formControlName="doctorId" [readonly]="doctorId!=-1 ? true :false">
+            </div> 
+
+            <div class="form-group">
+                <label>Name :</label>
+                <input type="text" class="form-control" formControlName="doctorName">
+                
+                
+            </div>
+            <div class="form-group">
+                <label>Password :</label>
+                <input type="password" class="form-control" formControlName="doctorPassword">
+                
+            </div>
+
+            <div class="form-group">
+                <label>MobileNo :</label>
+                <input type="text" class="form-control" formControlName="doctorMobileNo">
+                
+            </div>
+            ---- <div class="form-group">
+              <label>Gender :</label>
+              <input type="text" class="form-control" formControlName="gender">
+              
+          </div> -->
+            
+             <!--<div class="form-group">
+                <label>Email :</label>
+                <input type="email" class="form-control" formControlName="doctorEmail">
+                
+            </div>
+
+            <div class="form-group">
+                <label>Experience :</label>
+                <input type="tel" class="form-control" formControlName="doctorExperience">
+               
+            </div>
+
+            <div class="form-group">
+                <label>Domain :</label>
+                <input type="tel" class="form-control" formControlName="doctorDomain">
+               
+            </div>
+
+            <div class="form-group">
+                <label>Salary :</label>
+                <input type="text" class="form-control" formControlName="doctorSalary">
+                
+            </div>
+
+        </fieldset>
+       <br>          
+        <td>
+            <button type="submit" class="btn btn-primary" [disabled] ="doctorForm.invalid">Edit</button>&nbsp;&nbsp;<button class="btn btn-success" type="reset">Reset</button>
+        </td>
+
+        <button  class="btn btn-primary" (click)="return()">Back</button>
+   </form>   
+    
+</div> -->
+
+
+<h3 align="center">Enter Your details :</h3>
+<body style="background-color:silver; ">
+<script type="text/javascript" src="Js/loginValidation.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>               
+<table class="table table-striped">
+<div class="container">
+    <form novalidate [formGroup]="doctorForm" (ngSubmit)="updateDetails()" style="width:300px;padding: 30px;margin-left: 430px;">
+        <fieldset>
+           <div class="form-group">
+                <label>Id :</label>
+                <input type="text" class="form-control" formControlName="doctorId" [readonly]="doctorId!=-1 ? true :false">
+            </div> 
+
+            <div class="form-group">
+                <label>Name :</label>
+                <input type="text" class="form-control" formControlName="doctorName">
+                
+                
+            </div>
+            <div class="form-group">
+                <label>Password :</label>
+                <input type="password" class="form-control" formControlName="doctorPassword">
+                
+            </div>
+
+            <div class="form-group">
+                <label>MobileNo :</label>
+                <input type="text" class="form-control" formControlName="doctorMobileNo">
+                
+            </div>
+            <div class="form-group">
+              <label>Gender :</label>
+              <input type="text" class="form-control" formControlName="gender">
+              
+          </div>
+            
+            <div class="form-group">
+                <label>Email :</label>
+                <input type="email" class="form-control" formControlName="doctorEmail">
+                
+            </div>
+
+            <div class="form-group">
+                <label>Experience :</label>
+                <input type="tel" class="form-control" formControlName="doctorExperience">
+               
+            </div>
+
+            <div class="form-group">
+                <label>Domain :</label>
+                <input type="tel" class="form-control" formControlName="doctorDomain">
+               
+            </div>
+
+            <div class="form-group">
+                <label>Salary :</label>
+                <input type="text" class="form-control" formControlName="doctorSalary">
+                
+            </div>
+
+     
+       <br>          
+        
+            <span><button type="submit" class="btn btn-primary" [disabled] ="doctorForm.invalid">Edit</button>
+                &nbsp;  &nbsp;<button  class="btn btn-outline-success"  type="reset">Reset</button>
+       
+                 
+            &nbsp; &nbsp;<button  class="btn btn-primary" (click)="return()">Back</button></span>
+   
+   <br><br><br><br><br><br><br><br>
+

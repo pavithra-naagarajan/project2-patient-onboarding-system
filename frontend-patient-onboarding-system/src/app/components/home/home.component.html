@@ -1,0 +1,103 @@
+<!-- <div class="row">
+    <div class="column">
+    <img src="assets/Admin.jpeg" (click) ="adminLogin()" margin-left="10" style= "width:250px"/>
+</div>
+<div class="column">
+    <img src="assets/Doctor.jpeg" (click) ="doctorLogin()" class="align-self-center ml-4" style= "width:250px"/>
+</div>
+<div class="column">
+    <img src="assets/Patient.jpeg" (click) ="patientLogin()" margin-right="100" style= "width:250px"/>
+    </div></div>
+ -->
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Homepage</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body background="assets/homebackground.jpeg">
+
+	<header>
+            <div class="logo">
+              <img src="assets/icon.jpg" alt="">
+            </div>
+		<div class="navbar">
+            <a href="#">HOME</a>
+            <a href="#services">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a (click) ="adminLogin()">ADMIN</a>
+            <a (click)="doctorLogin()">DOCTOR</a>
+            <a (click) ="patientLogin()">PATIENT</a>
+        </div>
+		<div class="welcome-text">
+			<h1>HMMPSS <br> Hospital Management</h1>
+			<a href="#footer">Contact US</a>
+		</div>
+	</header>
+</body>
+<br><br><br>
+<div>
+	<div  id="services" style="text-align: center" >
+		<h1 style="padding:30px">Services We Providing as Follow</h1>
+	</div>
+	<div>
+		<h4>
+			As a User you can be Admin, Doctor and Patient
+			<div>As a user, you can register as Patient</div>
+			<div>As a user, Admin can register the Doctor Details</div>
+		</h4>
+		
+		<h5> Admin </h5>
+		<h6 style="text-align: center;"><img src="assets/Admin.jpeg" (click) ="adminLogin()" margin-left="10" style= "width:250px;"/></h6><br>
+		<h3><ul>As a Admin, you can register Doctor</ul>
+			<ul>As a Admin you can </ul>
+			<ul> As a Admin, U can add a doctor details. </ul>
+			<ul>As a Admin, U can view the list of all doctors.</ul>
+			<ul>As a Admin, U can view the list of all Patients. </ul>
+			<ul>As a Admin, U can view the list of all patient appointments.</ul>
+			<ul>As a Admin, U can view the details of particular patient appointment details.</ul>
+			</h3>
+			
+		<h5> Doctor </h5>
+		<h6 style="text-align: center;"><img src="assets/Doctor.jpeg" (click) ="doctorLogin()" class="align-self-center ml-4" style= "width:250px"/></h6><br>
+		<h3><ul>As a Doctor, U can view your profile and check your details.</ul>
+			<ul>As a Doctor, U can Edit your details.</ul>
+			<ul>As a Doctor, U can update your status. </ul>
+			<ul>As a Doctor, U can add your availability.</ul>
+		
+		</h3>
+
+		<h5> Patient </h5>
+		<h6 style="text-align: center;"><img src="assets/Patient.jpeg" (click) ="patientLogin()" margin-right="100" style= "width:250px"/>
+		</h6><br>
+		<h3><ul>As a Patient U can create account.</ul>
+			<ul>As a Patient U can view your profile and Edit your details .</ul>
+			<ul>As a Patient U can search a doctor by domain and select the doctor.</ul>
+			<ul>As a Patient U can book the appointment from the available slots.</ul>
+            <ul>As a Patient U can view your appointment after booking.</ul>
+            <ul>As a Patient U can give feedback about your Experience.</ul>
+		
+		</h3>
+	</div>
+</div>
+<br><br><br><br>
+<footer id="footer">
+	<p class="contact">
+		Contact us
+	<div style="text-align: center" style="font-size: medium;">On Whatsapp: +919500735131</div>
+	<h1 class="blackclass">Copyright@2021 HMMPSS HOSPITAL APP <br><br> HarithaPrabhakaran, MeenaGovindaraj, Mubasheer,PavithraNagarajan,SoumyaGovindraj,SudharaniKonari</h1>
+</footer>
+
+</html>
+
+
+
+
+
+

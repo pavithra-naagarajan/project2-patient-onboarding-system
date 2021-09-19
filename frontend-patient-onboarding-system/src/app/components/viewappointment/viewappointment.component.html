@@ -1,0 +1,28 @@
+
+<body>
+    <br><br>
+<h4 style="text-align: center;font-size: x-large;color:brown">Your AppointMent History</h4><br><br>
+<div class="reglist">
+      
+    <table class="table table-striped">
+    <thead>
+    <tr>
+    <th>Appointed Date</th>
+    <th>Appointed Time</th>
+    <th>Doctor Name</th>
+    <th>Doctor MobileNo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let patient of patientAppointment;">
+    <td>{{patient.availableDate}}</td>
+    <td>{{patient.availableTime}}</td>
+    <td>{{patient.doctorName}}</td>
+     <td>{{patient.doctorMobileNo}}</td>
+    </tr>
+    </tbody>
+</table>
+    <button class="btn btn-info" (click)=return()>Back</button>
+</div>
+
+</body>

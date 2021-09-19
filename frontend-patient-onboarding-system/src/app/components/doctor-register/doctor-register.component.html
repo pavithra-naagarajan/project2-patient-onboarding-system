@@ -1,0 +1,107 @@
+
+<div class="container">
+    <form style="width:300px;padding: 30px;margin-left: 430px;"
+    novalidate [formGroup]="doctorForm" (ngSubmit)="saveDoctor()">
+    <h2 style="color:teal;margin-left:40px;font-size: large;">Add Doctor Details</h2>
+        <fieldset>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="doctorName">
+                <div class="alert alert-danger"
+                    *ngIf="doctorForm.get('doctorName').hasError('required') && doctorForm.get('doctorName').dirty">
+                    Name is required
+                </div>
+                <div class="alert alert-danger"
+                    *ngIf="doctorForm.get('doctorName').hasError('minlength') && doctorForm.get('doctorName').dirty">
+                    Name must be of 5-10 characters
+                </div>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" formControlName="doctorPassword" />
+              <div class="alert alert-danger"
+                  *ngIf="doctorForm.get('doctorPassword').hasError('required') && doctorForm.get('doctorPassword').dirty">
+                  Password is required
+              </div>
+          </div> 
+          <div class="form-group">
+            <tr>
+                <label>*Gender :</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <td>
+                  <input type="radio" formControlName="gender" name="gender" value="Male">
+                  <label>Male</label>
+                </td>          
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <td>
+                  <input type="radio" formControlName="gender" name="gender"  value="Female">
+                  <label>Female</label>
+                </td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <td>
+                    <input type="radio" formControlName="gender" name="gender"  value="Others">
+                    <label>Others</label>
+                  </td>
+              </tr>
+              
+            </div> 
+        <div class="form-group">
+          <label>MobileNo</label>
+          <input type="text" class="form-control" formControlName="doctorMobileNo" />
+          <div class="alert alert-danger"
+              *ngIf="doctorForm.get('doctorMobileNo').hasError('required') && doctorForm.get('doctorMobileNo').dirty">
+              MobileNo is required
+          </div>
+        </div>
+      <div class="form-group">
+        <label>EmailId</label>
+        <input type="email" class="form-control" formControlName="doctorEmail" />
+        <div class="alert alert-danger"
+            *ngIf="doctorForm.get('doctorEmail').hasError('required') && doctorForm.get('doctorEmail').dirty">
+            EmailId is required
+        </div>
+    </div>
+    <div class="form-group">
+      <label>Domain</label>
+      <select class="form-control form-control-lg"   name="doctorDomain" formControlName="doctorDomain" ngModel required>
+        <option selected="selected">Select</option>
+        <option>Dental</option>
+        <option>Neurologists</option>
+        <option>Dermatologists</option>
+        <option>Orthopedic</option>
+        <option>Ophthalmologist</option>
+        <option>Cardiologists</option>
+    </select>
+      <div class="alert alert-danger"
+          *ngIf="doctorForm.get('doctorDomain').hasError('required') && doctorForm.get('doctorDomain').dirty">
+          Domain is required
+      </div>
+
+
+  </div>
+  <div class="form-group">
+    <label>Experience</label>
+    <input type="text" class="form-control" formControlName="doctorExperience" />
+    <div class="alert alert-danger"
+        *ngIf="doctorForm.get('doctorExperience').hasError('required') && doctorForm.get('doctorExperience').dirty">
+        Experience is required
+    </div>
+</div>
+<div class="form-group">
+  <label>Salary</label>
+  <input type="text" class="form-control" formControlName="doctorSalary" />
+  <div class="alert alert-danger"
+      *ngIf="doctorForm.get('doctorSalary').hasError('required') && doctorForm.get('doctorSalary').dirty">
+      Salary is required
+  </div>
+</div>
+<br><br>
+      </fieldset>
+      
+       <button type="submit" class="btn btn-primary" >Register</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <button type="reset" class="btn btn-primary" >Clear</button>
+  </form>
+</div> 
+
+
+
+

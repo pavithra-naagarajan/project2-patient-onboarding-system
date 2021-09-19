@@ -1,0 +1,288 @@
+<!-- <button class="btn btn-primary" (click)="viewPatients()">View Patients</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="viewDoctors()">View Doctors</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="registerDoctor()">Register Doctor</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="viewAllAppointments()">View All Appointments </button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="viewById()">View A Patient Appointment </button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href=""><button class="btn btn-primary" >Home</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+ -->
+<body>
+ <style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(31, 33, 34);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: rgb(44, 44, 46);
+  }
+  
+  /* button{
+    background-color: #2c09f5;
+  } */
+  </style>
+<ul>
+  <li><a><button class="btn btn-dark"(click)="home()">Home</button>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a  ><button class="btn btn-dark" btn-lg (click)="viewPatients()">View Patients</button>&nbsp;&nbsp;&nbsp;&nbsp; </a></li>
+  <li><a > <button class="btn btn-dark" (click)="viewDoctors()">View Doctors</button>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a ><button class="btn btn-dark" (click)="registerDoctor()">Register Doctor</button>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a>
+<button class="btn btn-dark" (click)="viewAllAppointments()">View All Appointments</button>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a ><button class="btn btn-dark" (click)="viewById()">View A Patient Appointment</button>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a href="adminlogin"><button class="btn btn-dark">Logout</button></a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+</ul>
+
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+<div *ngIf="textbox">
+  <form style="width:300px;padding: 30px;margin-left: 620px;"
+  novalidate [formGroup]="patientForm" (ngSubmit)="viewAppointmentById()">
+  <div class="form-group">
+    <label>Patient Id :</label>
+    <input type="text" class="form-control" formControlName="patientId">
+    </div>
+<br>
+   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  <input  type="submit" value="Search Patient" class="btn btn-primary" [disabled]="patientForm.invalid">
+
+</form>
+</div>
+
+
+<div *ngIf="show">
+<h2 align="center">Patient Details</h2>
+
+<div class="reglist">
+    <div>
+        <table class="table table-striped" >
+          <thead>
+            <tr>
+            <th>Patient Id</th>
+            <th>Patient Name</th>
+            <!-- <th>Password</th> -->
+
+            <th>Gender</th>
+            <th>Patient Age</th>
+            <th>Mobile Number</th>
+            <th>Mail Id</th>
+            <th>Address</th>
+            <!-- <th>Delete</th> -->
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let p of patients">
+           <td>
+              {{p.patientId}}
+            </td>
+            <td>
+                {{p.patientName}}
+            </td>
+            <!-- <td>
+                {{p.password}}
+            </td> -->
+            <td>
+                {{p.gender}}
+            </td>
+            <td>
+                {{p.patientAge}}
+            </td>
+            <td>
+                {{p.mobileNumber}}
+            </td>
+            <td>
+                {{p.mailId}}
+            </td>
+            <td>
+                {{p.address}}
+            </td>
+           <!--  <td>
+               
+                <button class="delete" (click)="deleteProduct(prod.productId)">Delete</button>
+            </td> -->
+           <!--  <td>
+              
+              <button class="edit" (click)="editProduct(prod.productId)">Edit</button>
+            </td> -->
+            
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <br>
+      <button  class="btn btn-primary" (click)="return()">Back</button>
+    </div>
+
+
+    <div *ngIf="showDoctor">
+        <h2 align="center">Doctor Details</h2>
+        
+        <div class="reglist">
+            <div>
+                <table class="table table-striped" >
+                  <thead>
+                  <tr>
+                   
+                    <th>Doctor Id</th>
+                    <th>Doctor Name</th>
+                    <th>Email Id</th>
+                    <th>Password</th>
+                    <th>Domain</th>
+                    <th>Experience In Years </th>
+                    <th>Mobile Number</th>
+                    <th>Salary</th>
+                    <th>Status</th>
+                   
+                    <!-- <th>Delete</th> -->
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let p of doctors">
+                   <td>
+                      {{p.doctorId}}
+                    </td>
+                    <td>
+                        {{p.doctorName}}
+                    </td>
+                    <td>
+                        {{p.doctorEmail}}
+                    </td>
+                    <td>
+                        {{p.doctorPassword}}
+                    </td>
+                    <td>
+                        {{p.doctorDomain}}
+                    </td>
+                    <td>
+                        {{p.doctorExperience}}
+                    </td>
+                    <td>
+                        {{p.doctorMobileNo}}
+                    </td>
+                    <td>
+                      {{p.doctorSalary}}
+                  </td>
+                    <td>
+                        {{p.status}}
+                    </td>
+                   <!--  <td>
+                       
+                        <button class="delete" (click)="deleteProduct(prod.productId)">Delete</button>
+                    </td> -->
+                   <!--  <td>
+                      
+                      <button class="edit" (click)="editProduct(prod.productId)">Edit</button>
+                    </td> -->
+                    
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>
+              <button  class="btn btn-primary" (click)="return()">Back</button>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="view">
+<br><br>
+            <h4 style="text-align:center;color:teal;font-size:xx-large;"><i><b>Appointments History</b></i></h4><br><br>
+           
+<div class="reglist">
+      
+    <table class="table table-striped" style="font-size: large;">
+    <thead>
+    <tr>
+      <th>Patient Id</th>
+      <th>Patient Name</th>
+    <th>Appointed Date</th>
+    <th>Appointed Time</th>
+    <th>Doctor Name</th>
+    <th>Doctor MobileNo</th>
+    
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let patient of patientAppointment;">
+      <td>{{patient.patientId}}</td>
+      <td>{{patient.patientName}}</td>
+    <td>{{patient.availableDate}}</td>
+    <td>{{patient.availableTime}}</td>
+    <td>{{patient.doctorName}}</td>
+     <td>{{patient.doctorMobileNo}}</td>
+    </tr>
+    </tbody>
+</table>
+    <button class="btn btn-info" (click)=return()>Back</button>
+</div>
+</div>
+
+
+
+<div *ngIf="viewId">
+  <h4>AppointMents History</h4><br><br>
+           
+  <div class="reglist">
+        
+      <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Patient Id</th>
+        <th>Patient Name</th>
+      <th>Appointed Date</th>
+      <th>Appointed Time</th>
+      <th>Doctor Name</th>
+      <th>Doctor MobileNo</th>
+      
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let patient of patientAppointment;">
+        <td>{{patient.patientId}}</td>
+        <td>{{patient.patientName}}</td>
+      <td>{{patient.availableDate}}</td>
+      <td>{{patient.availableTime}}</td>
+      <td>{{patient.doctorName}}</td>
+       <td>{{patient.doctorMobileNo}}</td>
+      </tr>
+      </tbody>
+  </table>
+      <button class="btn btn-info" (click)=return()>Back</button>
+  </div>
+  </div>
+</body>

@@ -1,0 +1,14 @@
+.container-header{
+    text-align: center;
+     text-decoration-color: mistyrose;
+     background-color:palegoldenrod;
+}
+h1{
+    font-style: inherit;
+    
+}
+.container-footer{
+    text-align: center;
+    text-decoration: limegreen;
+    background-color: sandybrown;
+}

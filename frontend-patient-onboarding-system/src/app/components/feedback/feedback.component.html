@@ -1,0 +1,17 @@
+<body>
+
+
+    <br><br>
+    <h3 style="color:black ;font-size: large;">Give Your FeedBack Here!</h3><br><br>
+   <div>
+    <h4><i><font color=gray>{{message}}</font></i></h4>
+<form (ngSubmit)="saveFeedback()">
+    <textarea rows="5" cols="33"></textarea><br><br>
+   
+   
+</form>
+
+    </div>
+    <button  class="btn btn-primary" type="submit" (click)="saveFeedback()">Submit</button>&nbsp;&nbsp;
+    <a routerLink="/patientFunc/:patiendId" ><button class="btn btn-primary">Back</button></a>
+</body>

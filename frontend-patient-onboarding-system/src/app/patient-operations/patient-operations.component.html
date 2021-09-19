@@ -1,0 +1,98 @@
+<!--  <button class="btn btn-primary" (click)="patientProfile()">View Profile</button>&nbsp;&nbsp;&nbsp;&nbsp; 
+
+ <button class="btn btn-primary" (click)="aboutUs(patient.patientId)">About Us</button>&nbsp;&nbsp;&nbsp;&nbsp;
+ <button class="btn btn-primary" (click)="searchDoctor(patient.patientId)">Search Doctor</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="viewAppointment(patient.patientId)">View Appointment</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="feedback()">FeedBack</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="logout()">Logout</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href=""><button class="btn btn-primary" >Home</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<router-outlet></router-outlet> -->
+
+
+<style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(31, 33, 34);
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: rgb(44, 44, 46);
+    }
+    
+    /* button{
+      background-color: #2c09f5;
+    } */
+    </style>
+    <body>
+<ul>
+  <li><a href=""><button class="btn btn-dark">Home</button></a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+    <li><a  ><button class="btn btn-dark" btn-lg (click)="patientProfile()">View Profile</button>&nbsp;&nbsp;&nbsp;&nbsp; </a></li>
+    <li><a > <button class="btn btn-dark" (click)="aboutUs(patient.patientId)">About Us</button>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+    <li><a ><button class="btn btn-dark" (click)="searchDoctor(patient.patientId)">Search Doctor</button>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+    <li><a>
+  <button class="btn btn-dark" (click)="viewAppointment(patient.patientId)">View Appointment</button>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+    <li><a ><button class="btn btn-dark" (click)="feedback()">FeedBack</button>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a><button class="btn btn-dark"(click)="logout()">Logout</button>&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  </ul>
+  
+
+<router-outlet></router-outlet>
+
+  <!-- <button class="btn btn-primary" (click)="updatePatient()">Update Patient</button>&nbsp;&nbsp;&nbsp;&nbsp;  -->
+
+ <div *ngIf="showPatient">
+    <div class="patientProfile">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+         <th>Patient Id</th> 
+            <th>Patient Name</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Patient Age</th>
+            <th>Mobile Number</th>
+            <th>Mail Id</th>
+            <th>Address</th>
+            <th>Edit</th> 
+            </tr></thead>
+
+            <tbody>
+                <tr>
+                   <td>{{patient.patientId}}</td>
+                    <td>{{patient.patientName}}</td>
+                    <td>{{patient.password}}</td>
+                    <td>{{patient.gender}}</td>
+                    <td>{{patient.patientAge}}</td>
+                    <td>{{patient.mobileNumber}}</td>
+                    <td>{{patient.mailId}}</td>
+                    <td>{{patient.address}}</td>
+                    <td>
+                        <button class="btn btn-primary" (click)="updatePatient(patient.patientId)">Edit Patient</button></td>
+                   
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 
+        <button  class="btn btn-primary" (click)="return()">Back</button> -->
+        
+</div>
+</body>

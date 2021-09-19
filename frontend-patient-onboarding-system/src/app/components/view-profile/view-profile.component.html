@@ -1,0 +1,84 @@
+<h2 align="center">Patient Profile</h2>
+
+<!-- 
+    <div>
+        <table class="table" align="center" cellpadding="8" cellspacing="8" border="5">
+          <tr align="center">
+            <th>Patient Id</th>
+            <th>Patient Name</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Patient Age</th>
+            <th>Mobile Number</th>
+            <th>Mail Id</th>
+            <th>Address</th>
+
+          </tr>
+          <tr *ngFor="let p of patients">
+           <td>
+              {{p.patientId}}
+            </td>
+            <td>
+                {{p.patientName}}
+            </td>
+            <td>
+                {{p.password}}
+            </td>
+            <td>
+                {{p.gender}}
+            </td>
+
+            <td>
+                {{p.patientAge}}
+            </td>
+            <td>
+                {{p.mobileNumber}}
+            </td>
+            <td>
+                {{p.mailId}}
+            </td>
+            <td>
+                {{p.address}}
+            </td>
+            <!-- <td>
+               
+                <button class="delete" (click)="deleteProduct(prod.productId)">Delete</button>
+            </td>
+            <td>
+              
+              <button class="edit" (click)="editProduct(prod.productId)">Edit</button>
+            </td> -->
+            
+         <!-- // </tr>
+       // </table>
+      </div> -->
+     <!-- {{this.patientId}}-->
+     <table class="table" align="center" cellpadding="8" cellspacing="8" border="5">     
+        <tbody>
+    
+          <tr>
+            <th>Patient Id</th>
+            <th>Patient Name</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Patient Age</th>
+            <th>Mobile Number</th>
+            <th>Mail Id</th>
+            <th>Address</th>
+      </tr>
+      <tr >
+        <td>{{patient?.patientId}}</td>
+      
+        <td>{{patient?.patientName}}</td>
+        <td>{{patient?.password}}</td>
+        <td>{{patient?.gender}}</td>
+        <td>{{patient?.patientAge}}</td>
+        <td>{{patient?.mobileNumber}}</td>
+        <td>{{patient?.mailId}}</td>
+        <td>{{patient?.address}}</td>
+        
+         
+      </tr>
+      </tbody>
+      </table>
+      

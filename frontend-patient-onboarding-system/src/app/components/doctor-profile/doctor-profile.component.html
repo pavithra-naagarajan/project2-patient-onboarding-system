@@ -1,0 +1,34 @@
+
+<body>
+  <br><br><br><br>
+<h2 align="center">Doctor Profile</h2>
+<br>
+     <table class="table" align="center" cellpadding="8" cellspacing="8" border="5">     
+        <tbody>
+          <tr>
+            <th>DoctorId </th>
+            <th>DoctorName</th>
+            <th>DoctorPassword</th>
+            
+            <th>MobileNumber</th>
+            <th>EmailId</th>
+            <th>Domain</th>
+            <th>Experience</th>
+            <th>Salary</th>
+            <th>Edit </th>
+      </tr>
+      <tr >
+        <td>{{doctor?.doctorId}}</td>
+        <td>{{doctor?.doctorName}}</td>
+        <td>{{doctor?.doctorPassword}}</td>
+    
+        <td>{{doctor?.doctorMobileNo}}</td>
+        <td>{{doctor?.doctorEmail}}</td>
+        <td>{{doctor?.doctorDomain}}</td>
+        <td>{{doctor?.doctorExperience}}</td>
+        <td>{{doctor?.doctorSalary}}</td> 
+        <td><button class="btn btn-primary" (click)="updateDoctor(doctor.doctorId)">Edit Details</button></td>   
+      </tr>
+      </tbody>
+      </table>
+</body>
